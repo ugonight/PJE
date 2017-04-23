@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ファイルFToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.名前を付けて保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ファイルFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新規作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripSplit = new System.Windows.Forms.ToolStripMenuItem();
+            this.設定OToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.textEnglish = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,11 +54,7 @@
             this.buttonCopy = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textHeader = new System.Windows.Forms.TextBox();
-            this.設定OToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonRun = new System.Windows.Forms.Button();
-            this.ファイルFToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.名前を付けて保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -68,8 +68,31 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(538, 24);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ファイルFToolStripMenuItem1
+            // 
+            this.ファイルFToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.名前を付けて保存ToolStripMenuItem,
+            this.開くToolStripMenuItem});
+            this.ファイルFToolStripMenuItem1.Name = "ファイルFToolStripMenuItem1";
+            this.ファイルFToolStripMenuItem1.Size = new System.Drawing.Size(66, 20);
+            this.ファイルFToolStripMenuItem1.Text = "ファイル(&F)";
+            // 
+            // 名前を付けて保存ToolStripMenuItem
+            // 
+            this.名前を付けて保存ToolStripMenuItem.Name = "名前を付けて保存ToolStripMenuItem";
+            this.名前を付けて保存ToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.名前を付けて保存ToolStripMenuItem.Text = "名前を付けて保存";
+            this.名前を付けて保存ToolStripMenuItem.Click += new System.EventHandler(this.名前を付けて保存ToolStripMenuItem_Click);
+            // 
+            // 開くToolStripMenuItem
+            // 
+            this.開くToolStripMenuItem.Name = "開くToolStripMenuItem";
+            this.開くToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.開くToolStripMenuItem.Text = "開く";
+            this.開くToolStripMenuItem.Click += new System.EventHandler(this.開くToolStripMenuItem_Click);
             // 
             // ファイルFToolStripMenuItem
             // 
@@ -94,6 +117,13 @@
             this.ToolStripSplit.Text = "全文を文に振り分ける";
             this.ToolStripSplit.Click += new System.EventHandler(this.ToolStripSplit_Click);
             // 
+            // 設定OToolStripMenuItem
+            // 
+            this.設定OToolStripMenuItem.Name = "設定OToolStripMenuItem";
+            this.設定OToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.設定OToolStripMenuItem.Text = "設定(&O)";
+            this.設定OToolStripMenuItem.Click += new System.EventHandler(this.設定OToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -110,7 +140,7 @@
             this.textEnglish.Name = "textEnglish";
             this.textEnglish.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textEnglish.Size = new System.Drawing.Size(463, 57);
-            this.textEnglish.TabIndex = 2;
+            this.textEnglish.TabIndex = 0;
             // 
             // label2
             // 
@@ -126,7 +156,7 @@
             this.textFootnote.Location = new System.Drawing.Point(43, 83);
             this.textFootnote.Name = "textFootnote";
             this.textFootnote.Size = new System.Drawing.Size(463, 19);
-            this.textFootnote.TabIndex = 4;
+            this.textFootnote.TabIndex = 1;
             // 
             // textJapanese
             // 
@@ -135,7 +165,7 @@
             this.textJapanese.Name = "textJapanese";
             this.textJapanese.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textJapanese.Size = new System.Drawing.Size(463, 57);
-            this.textJapanese.TabIndex = 6;
+            this.textJapanese.TabIndex = 2;
             // 
             // label3
             // 
@@ -153,7 +183,7 @@
             this.listSentence.Location = new System.Drawing.Point(55, 244);
             this.listSentence.Name = "listSentence";
             this.listSentence.Size = new System.Drawing.Size(463, 112);
-            this.listSentence.TabIndex = 7;
+            this.listSentence.TabIndex = 8;
             // 
             // groupBox1
             // 
@@ -166,7 +196,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 45);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(521, 193);
-            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "文の編集";
             // 
@@ -175,7 +205,7 @@
             this.buttonAdd.Location = new System.Drawing.Point(12, 271);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(37, 23);
-            this.buttonAdd.TabIndex = 9;
+            this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "追加";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
@@ -185,7 +215,7 @@
             this.buttonEdit.Location = new System.Drawing.Point(12, 300);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(37, 23);
-            this.buttonEdit.TabIndex = 10;
+            this.buttonEdit.TabIndex = 3;
             this.buttonEdit.Text = "編集";
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
@@ -195,7 +225,7 @@
             this.buttonRemove.Location = new System.Drawing.Point(12, 329);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(37, 23);
-            this.buttonRemove.TabIndex = 11;
+            this.buttonRemove.TabIndex = 4;
             this.buttonRemove.Text = "削除";
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
@@ -208,7 +238,7 @@
             this.textOutput.ReadOnly = true;
             this.textOutput.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textOutput.Size = new System.Drawing.Size(463, 107);
-            this.textOutput.TabIndex = 12;
+            this.textOutput.TabIndex = 9;
             this.textOutput.TextChanged += new System.EventHandler(this.textOutput_TextChanged);
             // 
             // label4
@@ -235,7 +265,7 @@
             this.buttonSave.Location = new System.Drawing.Point(12, 419);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(37, 23);
-            this.buttonSave.TabIndex = 15;
+            this.buttonSave.TabIndex = 6;
             this.buttonSave.Text = "保存";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -246,7 +276,7 @@
             this.buttonCopy.Location = new System.Drawing.Point(12, 448);
             this.buttonCopy.Name = "buttonCopy";
             this.buttonCopy.Size = new System.Drawing.Size(37, 23);
-            this.buttonCopy.TabIndex = 16;
+            this.buttonCopy.TabIndex = 7;
             this.buttonCopy.Text = "コピー";
             this.buttonCopy.UseVisualStyleBackColor = true;
             this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
@@ -265,47 +295,17 @@
             this.textHeader.Location = new System.Drawing.Point(91, 27);
             this.textHeader.Name = "textHeader";
             this.textHeader.Size = new System.Drawing.Size(398, 19);
-            this.textHeader.TabIndex = 18;
-            // 
-            // 設定OToolStripMenuItem
-            // 
-            this.設定OToolStripMenuItem.Name = "設定OToolStripMenuItem";
-            this.設定OToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.設定OToolStripMenuItem.Text = "設定(&O)";
-            this.設定OToolStripMenuItem.Click += new System.EventHandler(this.設定OToolStripMenuItem_Click);
+            this.textHeader.TabIndex = 0;
             // 
             // buttonRun
             // 
             this.buttonRun.Location = new System.Drawing.Point(12, 390);
             this.buttonRun.Name = "buttonRun";
             this.buttonRun.Size = new System.Drawing.Size(37, 23);
-            this.buttonRun.TabIndex = 19;
+            this.buttonRun.TabIndex = 5;
             this.buttonRun.Text = "実行";
             this.buttonRun.UseVisualStyleBackColor = true;
             this.buttonRun.Click += new System.EventHandler(this.buttonRun_Click);
-            // 
-            // ファイルFToolStripMenuItem1
-            // 
-            this.ファイルFToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.名前を付けて保存ToolStripMenuItem,
-            this.開くToolStripMenuItem});
-            this.ファイルFToolStripMenuItem1.Name = "ファイルFToolStripMenuItem1";
-            this.ファイルFToolStripMenuItem1.Size = new System.Drawing.Size(66, 20);
-            this.ファイルFToolStripMenuItem1.Text = "ファイル(&F)";
-            // 
-            // 名前を付けて保存ToolStripMenuItem
-            // 
-            this.名前を付けて保存ToolStripMenuItem.Name = "名前を付けて保存ToolStripMenuItem";
-            this.名前を付けて保存ToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.名前を付けて保存ToolStripMenuItem.Text = "名前を付けて保存";
-            this.名前を付けて保存ToolStripMenuItem.Click += new System.EventHandler(this.名前を付けて保存ToolStripMenuItem_Click);
-            // 
-            // 開くToolStripMenuItem
-            // 
-            this.開くToolStripMenuItem.Name = "開くToolStripMenuItem";
-            this.開くToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.開くToolStripMenuItem.Text = "開く";
-            this.開くToolStripMenuItem.Click += new System.EventHandler(this.開くToolStripMenuItem_Click);
             // 
             // Form1
             // 

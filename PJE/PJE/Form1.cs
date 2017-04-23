@@ -137,6 +137,10 @@ namespace PJE
                 {
                     mFileName = sfd.FileName;
                 }
+                else
+                {
+                    return;
+                }
             }
 
 
@@ -165,6 +169,10 @@ namespace PJE
             {
                 mFileName = sfd.FileName;
             }
+            else
+            {
+                return;
+            }
             System.IO.StreamWriter sw = new System.IO.StreamWriter(
                mFileName,
                 false,
@@ -184,6 +192,10 @@ namespace PJE
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                mFileName = ofd.FileName;
+            }
+            else
+            {
+                return;
             }
 
             System.IO.StreamReader sr = new System.IO.StreamReader(
