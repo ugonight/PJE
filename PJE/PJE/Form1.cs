@@ -284,5 +284,31 @@ namespace PJE
             f.ShowDialog(this);
             f.Dispose();
         }
+
+        private void buttonUp_Click(object sender, EventArgs e)
+        {
+            if (listSentence.SelectedIndex > 0)
+            {
+                String back = listSentence.Text;
+                listSentence.Items[listSentence.SelectedIndex] = listSentence.Items[listSentence.SelectedIndex - 1];
+                listSentence.Items[listSentence.SelectedIndex - 1] = back;
+
+                control.moveSentence(true, listSentence.SelectedIndex);
+                listSentence.SelectedIndex = listSentence.SelectedIndex - 1;
+            }
+        }
+
+        private void buttonDown_Click(object sender, EventArgs e)
+        {
+            if (listSentence.SelectedIndex < listSentence.Items.Count-1)
+            {
+                String back = listSentence.Text;
+                listSentence.Items[listSentence.SelectedIndex] = listSentence.Items[listSentence.SelectedIndex + 1];
+                listSentence.Items[listSentence.SelectedIndex + 1] = back;
+
+                control.moveSentence(false, listSentence.SelectedIndex);
+                listSentence.SelectedIndex = listSentence.SelectedIndex + 1;
+            }
+        }
     }
 }

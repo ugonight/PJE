@@ -43,6 +43,24 @@ namespace PJE
             mJapanese.RemoveAt(i);
         }
 
+        public void moveSentence(bool up,int i)
+        {
+            int target = up ? -1 : 1;
+            String back;
+
+            back = mEnglish[i + target];
+            mEnglish[i + target] = mEnglish[i];
+            mEnglish[i] = back;
+
+            back = mFootnote[i + target];
+            mFootnote[i + target] = mFootnote[i];
+            mFootnote[i] = back;
+
+            back = mJapanese[i + target];
+            mJapanese[i + target] = mJapanese[i];
+            mJapanese[i] = back;
+        }
+
         public String getEnglish(int i)
         {
             return mEnglish[i];

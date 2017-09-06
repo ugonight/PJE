@@ -55,6 +55,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textHeader = new System.Windows.Forms.TextBox();
             this.buttonRun = new System.Windows.Forms.Button();
+            this.buttonUp = new System.Windows.Forms.Button();
+            this.buttonDown = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -182,8 +184,8 @@
             this.listSentence.ItemHeight = 12;
             this.listSentence.Location = new System.Drawing.Point(55, 244);
             this.listSentence.Name = "listSentence";
-            this.listSentence.Size = new System.Drawing.Size(463, 112);
-            this.listSentence.TabIndex = 8;
+            this.listSentence.Size = new System.Drawing.Size(463, 136);
+            this.listSentence.TabIndex = 7;
             // 
             // groupBox1
             // 
@@ -232,7 +234,7 @@
             // 
             // textOutput
             // 
-            this.textOutput.Location = new System.Drawing.Point(55, 370);
+            this.textOutput.Location = new System.Drawing.Point(55, 403);
             this.textOutput.Multiline = true;
             this.textOutput.Name = "textOutput";
             this.textOutput.ReadOnly = true;
@@ -253,7 +255,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 373);
+            this.label5.Location = new System.Drawing.Point(10, 406);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 12);
             this.label5.TabIndex = 14;
@@ -262,10 +264,10 @@
             // buttonSave
             // 
             this.buttonSave.Enabled = false;
-            this.buttonSave.Location = new System.Drawing.Point(12, 419);
+            this.buttonSave.Location = new System.Drawing.Point(12, 452);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(37, 23);
-            this.buttonSave.TabIndex = 6;
+            this.buttonSave.TabIndex = 9;
             this.buttonSave.Text = "保存";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -273,10 +275,10 @@
             // buttonCopy
             // 
             this.buttonCopy.Enabled = false;
-            this.buttonCopy.Location = new System.Drawing.Point(12, 448);
+            this.buttonCopy.Location = new System.Drawing.Point(12, 481);
             this.buttonCopy.Name = "buttonCopy";
             this.buttonCopy.Size = new System.Drawing.Size(37, 23);
-            this.buttonCopy.TabIndex = 7;
+            this.buttonCopy.TabIndex = 10;
             this.buttonCopy.Text = "コピー";
             this.buttonCopy.UseVisualStyleBackColor = true;
             this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
@@ -299,19 +301,41 @@
             // 
             // buttonRun
             // 
-            this.buttonRun.Location = new System.Drawing.Point(12, 390);
+            this.buttonRun.Location = new System.Drawing.Point(12, 423);
             this.buttonRun.Name = "buttonRun";
             this.buttonRun.Size = new System.Drawing.Size(37, 23);
-            this.buttonRun.TabIndex = 5;
+            this.buttonRun.TabIndex = 8;
             this.buttonRun.Text = "実行";
             this.buttonRun.UseVisualStyleBackColor = true;
             this.buttonRun.Click += new System.EventHandler(this.buttonRun_Click);
+            // 
+            // buttonUp
+            // 
+            this.buttonUp.Location = new System.Drawing.Point(12, 357);
+            this.buttonUp.Name = "buttonUp";
+            this.buttonUp.Size = new System.Drawing.Size(17, 23);
+            this.buttonUp.TabIndex = 5;
+            this.buttonUp.Text = "↑";
+            this.buttonUp.UseVisualStyleBackColor = true;
+            this.buttonUp.Click += new System.EventHandler(this.buttonUp_Click);
+            // 
+            // buttonDown
+            // 
+            this.buttonDown.Location = new System.Drawing.Point(32, 357);
+            this.buttonDown.Name = "buttonDown";
+            this.buttonDown.Size = new System.Drawing.Size(17, 23);
+            this.buttonDown.TabIndex = 6;
+            this.buttonDown.Text = "↓";
+            this.buttonDown.UseVisualStyleBackColor = true;
+            this.buttonDown.Click += new System.EventHandler(this.buttonDown_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 482);
+            this.ClientSize = new System.Drawing.Size(538, 522);
+            this.Controls.Add(this.buttonDown);
+            this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.buttonRun);
             this.Controls.Add(this.textHeader);
             this.Controls.Add(this.label6);
@@ -369,6 +393,8 @@
         private System.Windows.Forms.ToolStripMenuItem ファイルFToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 名前を付けて保存ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 開くToolStripMenuItem;
+        private System.Windows.Forms.Button buttonUp;
+        private System.Windows.Forms.Button buttonDown;
     }
 }
 
